@@ -1,0 +1,48 @@
+<br>
+<div class="card">
+  <div class="card-body">
+    <div class="card-header">
+      Alta de colaboradores
+    </div>
+    <br>
+    <form>
+      <div class="form-group row">
+        
+        <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+          <input id="nombre" type="text" [(ngModel)]="user.name" name="nombre" >
+        </div>
+      </div>
+      <div class="form-group row">
+          <label for="apellido" class="col-sm-2 col-form-label">Apellido</label>
+          <div class="col-sm-10">
+            <input id="apellido" type="text" [(ngModel)]="user.lastName "  name="apellido" >
+          </div>
+      </div>
+      
+      <div class="form-group row">
+          <label for="edad" class="col-sm-2 col-form-label">Edad</label>
+          <div class="col-sm-10">
+            <input id="edad" type="number" name="edad" [(ngModel)]="user.age">
+          </div>
+      </div>
+      <div class="form-group row">
+          <label for="nacimiento" class="col-sm-2 col-form-label">Fecha de nacimiento</label>
+          <div class="col-sm-10">
+            <input id="nacimiento" type="date" name="nacimiento" [(ngModel)]="user.dateBorn">
+          </div>
+      </div>
+      <div class="form-group row">
+        
+          <div class="col-sm-10">
+              <button class="btn btn-primary" (click)="onSubmiit()"type="submit">Alta</button>
+          </div>
+          
+      </div>
+    
+     
+      
+    </form>
+  
+  </div>
+</div>

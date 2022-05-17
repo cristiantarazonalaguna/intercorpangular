@@ -1,0 +1,36 @@
+
+<div class="card">
+  <div class="card-body">
+    <div class="card-header">
+      Lista de Colaboradores
+    </div>
+   
+    <ngx-spinner [fullScreen]="false" type = "timer" bdColor = "rgba(0, 0, 0, 0.23)"
+    type="ball-scale-ripple-multiple"  size="medium">
+      <p class="loading">Loading ...</p>
+    </ngx-spinner>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">apellido</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Fecha de nacimiento</th>
+          <th scope="col">Fecha de muerte</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let us of users">
+          <td >{{us.name}}</td>
+          <td >{{us.lastName}}</td>
+          <td >{{us.age}}</td>
+          <td >{{us.dateBorn | date:'medium'}}</td>
+          <td >{{us.dateDie | date:'medium'}}</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+ 
+</div>
+
