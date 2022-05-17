@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { Router } from '@angular/router';
@@ -12,6 +12,9 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { InterComponent } from './pages/inter/inter.component';
 import { ReportComponent } from './pages/report/report.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import localeEs from '@angular/common/locales/es'
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localeEs , 'es')
 
 @NgModule({
   declarations: [
@@ -26,9 +29,10 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     ComponentsModule,
     FormsModule,
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue:'es'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
